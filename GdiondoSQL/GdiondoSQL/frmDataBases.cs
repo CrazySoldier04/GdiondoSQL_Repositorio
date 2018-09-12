@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace GdiondoSQL
 {
-    public partial class Form1 : Form
+    public partial class frmDataBases : Form
     {
-        public Form1()
+        public frmDataBases()
         {
             InitializeComponent();
+        }
+
+        private void frmDataBases_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
