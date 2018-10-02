@@ -16,7 +16,7 @@ namespace GdiondoSQL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MDIInicio());
+            Application.Run(new frmConexion());
         }
     }
 }

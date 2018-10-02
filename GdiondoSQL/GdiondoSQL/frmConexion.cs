@@ -19,9 +19,12 @@ namespace GdiondoSQL
             InitializeComponent();
         }
 
+        public static String user, pwd, database, puerto, server, host;
+
         private int _imageIndex;
         private String _etiqueta;
-        MySqlConnection cn;
+
+        MySql lib;
 
         public int ImageIndex
         {
@@ -155,12 +158,26 @@ namespace GdiondoSQL
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+            user = txtUsuario.Text;
+            pwd = txtPwd.Text;
+            puerto = txtPuerto.Text;
+            host = txtHost.Text;
+            server = cbxConexion.Text;
+            database = txtBaseDeDatos.Text;
             if (cbxConexion.SelectedIndex == 0)
             {
-                cn = new MySqlConnection("server=" + txtHost.Text + ";port=" + txtPuerto.Text + ";uid=" + txtUsuario.Text + ";pwd=" + txtPwd.Text +  ";database=" + txtBaseDeDatos.Text + ";");
-                cn.Open();
-                MessageBox.Show("holis");
-                cn.Close();
+                lib = new MySql(txtHost.Text, txtPuerto.Text, txtUsuario.Text, txtPwd.Text, txtBaseDeDatos.Text);
+                if (lib.AbrirConexion())
+                {
+                    frmDataBases ventana = new frmDataBases();
+                    this.Hide();
+                    ventana.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Error: " + lib.errorMsge, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                }
+                lib.CerrarConexion();
             }
         }
     }

@@ -19,6 +19,7 @@ namespace GdiondoSQL
             InitializeComponent();
         }
 
+
         private void ShowNewForm(object sender, EventArgs e)
         {
             Form childForm = new Form();
@@ -108,7 +109,8 @@ namespace GdiondoSQL
         {
             frmDataBases ventana = new frmDataBases();
             ventana.MdiParent = this;
-            ventana.Show();
+            //ventana.Show(lista);
+            //MessageBox.Show()
         }
     }
 }

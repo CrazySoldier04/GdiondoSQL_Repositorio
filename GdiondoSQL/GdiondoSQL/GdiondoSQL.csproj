@@ -68,6 +68,7 @@
     <Compile Include="MDIInicio.Designer.cs">
       <DependentUpon>MDIInicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="MySql.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmConexion.resx">
