@@ -54,5 +54,10 @@ namespace GdiondoSQL
         {
             CargarDatos();
         }
+
+        private void pnlCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

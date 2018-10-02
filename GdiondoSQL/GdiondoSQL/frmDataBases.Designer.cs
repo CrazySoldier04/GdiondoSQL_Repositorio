@@ -33,8 +33,8 @@
             this.pnlCerrar = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlContenido = new System.Windows.Forms.Panel();
-            this.dgvInfo = new System.Windows.Forms.DataGridView();
             this.txtShowCreate = new System.Windows.Forms.TextBox();
+            this.dgvInfo = new System.Windows.Forms.DataGridView();
             this.pnlTitulo.SuspendLayout();
             this.pnlContenido.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfo)).BeginInit();
@@ -72,6 +72,7 @@
             this.pnlCerrar.Name = "pnlCerrar";
             this.pnlCerrar.Size = new System.Drawing.Size(33, 33);
             this.pnlCerrar.TabIndex = 1;
+            this.pnlCerrar.Click += new System.EventHandler(this.pnlCerrar_Click);
             this.pnlCerrar.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCerrar_Paint);
             // 
             // lblTitulo
@@ -97,6 +98,18 @@
             this.pnlContenido.Size = new System.Drawing.Size(900, 462);
             this.pnlContenido.TabIndex = 2;
             // 
+            // txtShowCreate
+            // 
+            this.txtShowCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtShowCreate.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtShowCreate.ForeColor = System.Drawing.Color.Black;
+            this.txtShowCreate.Location = new System.Drawing.Point(199, 373);
+            this.txtShowCreate.Multiline = true;
+            this.txtShowCreate.Name = "txtShowCreate";
+            this.txtShowCreate.ReadOnly = true;
+            this.txtShowCreate.Size = new System.Drawing.Size(701, 89);
+            this.txtShowCreate.TabIndex = 2;
+            // 
             // dgvInfo
             // 
             this.dgvInfo.AllowUserToAddRows = false;
@@ -107,6 +120,7 @@
             this.dgvInfo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgvInfo.GridColor = System.Drawing.Color.Black;
             this.dgvInfo.Location = new System.Drawing.Point(199, 0);
             this.dgvInfo.Name = "dgvInfo";
             this.dgvInfo.ReadOnly = true;
@@ -114,18 +128,6 @@
             this.dgvInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInfo.Size = new System.Drawing.Size(701, 374);
             this.dgvInfo.TabIndex = 1;
-            // 
-            // txtShowCreate
-            // 
-            this.txtShowCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtShowCreate.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtShowCreate.ForeColor = System.Drawing.Color.Red;
-            this.txtShowCreate.Location = new System.Drawing.Point(199, 373);
-            this.txtShowCreate.Multiline = true;
-            this.txtShowCreate.Name = "txtShowCreate";
-            this.txtShowCreate.ReadOnly = true;
-            this.txtShowCreate.Size = new System.Drawing.Size(701, 89);
-            this.txtShowCreate.TabIndex = 2;
             // 
             // frmDataBases
             // 
