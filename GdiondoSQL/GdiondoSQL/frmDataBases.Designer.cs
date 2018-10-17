@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDataBases));
             this.treeView1 = new System.Windows.Forms.TreeView();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.pnlCerrar = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -43,17 +46,28 @@
             // treeView1
             // 
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.treeView1.ImageIndex = 0;
+            this.treeView1.ImageList = this.imageList1;
             this.treeView1.Location = new System.Drawing.Point(0, 0);
             this.treeView1.Margin = new System.Windows.Forms.Padding(5);
             this.treeView1.Name = "treeView1";
+            this.treeView1.SelectedImageIndex = 0;
+            this.treeView1.ShowRootLines = false;
             this.treeView1.Size = new System.Drawing.Size(199, 462);
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "database.png");
+            this.imageList1.Images.SetKeyName(1, "documento.png");
+            // 
             // pnlTitulo
             // 
-            this.pnlTitulo.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.pnlTitulo.BackColor = System.Drawing.SystemColors.HotTrack;
             this.pnlTitulo.Controls.Add(this.pnlCerrar);
             this.pnlTitulo.Controls.Add(this.lblTitulo);
             this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -81,7 +95,7 @@
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(372, 7);
+            this.lblTitulo.Location = new System.Drawing.Point(3, 7);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(156, 19);
             this.lblTitulo.TabIndex = 0;
@@ -93,6 +107,7 @@
             this.pnlContenido.Controls.Add(this.dgvInfo);
             this.pnlContenido.Controls.Add(this.treeView1);
             this.pnlContenido.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContenido.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlContenido.Location = new System.Drawing.Point(0, 33);
             this.pnlContenido.Name = "pnlContenido";
             this.pnlContenido.Size = new System.Drawing.Size(900, 462);
@@ -161,5 +176,6 @@
         private System.Windows.Forms.Panel pnlCerrar;
         private System.Windows.Forms.DataGridView dgvInfo;
         private System.Windows.Forms.TextBox txtShowCreate;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }

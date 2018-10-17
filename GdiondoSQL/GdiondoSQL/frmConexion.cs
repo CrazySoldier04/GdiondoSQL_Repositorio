@@ -82,7 +82,7 @@ namespace GdiondoSQL
                 }
                 else if (e.Index == 3)
                 {
-                    e.Graphics.DrawString(string.Format("Postgres", e.Index), e.Font, new SolidBrush(e.ForeColor),
+                    e.Graphics.DrawString(string.Format("PostgreSql", e.Index), e.Font, new SolidBrush(e.ForeColor),
                     e.Bounds.Left + 32, e.Bounds.Top);
                 }
                 else if (e.Index == 4)
@@ -110,7 +110,7 @@ namespace GdiondoSQL
             }
             else if (cbxConexion.SelectedIndex == 1)
             {
-                txtHost.Text = "";
+                txtHost.Text = "127.0.0.1";
                 txtUsuario.Text = "sa";
                 txtPuerto.Text = "1433";
             }
@@ -122,7 +122,7 @@ namespace GdiondoSQL
             }
             else if (cbxConexion.SelectedIndex == 3)
             {
-                txtHost.Text = "";
+                txtHost.Text = "127.0.0.1";
                 txtUsuario.Text = "postgres";
                 txtPuerto.Text = "5432";
             }
@@ -178,6 +178,18 @@ namespace GdiondoSQL
                     MessageBox.Show("Error: " + lib.errorMsge, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
                 }
                 lib.CerrarConexion();
+            }
+            else if (cbxConexion.SelectedIndex == 3)
+            {
+                PostgresSql libp = new PostgresSql();
+                if(libp.OpenConnection())
+                {
+                    MessageBox.Show("Mierda");
+                }
+                else
+                {
+                    MessageBox.Show(PostgresSql.errorMsge);
+                }
             }
         }
     }

@@ -31,31 +31,31 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConexion));
             this.pnlTitulo = new System.Windows.Forms.Panel();
+            this.pbxSimbolo = new System.Windows.Forms.PictureBox();
+            this.pbxCerrar = new System.Windows.Forms.PictureBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlContenido = new System.Windows.Forms.Panel();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnEntrar = new System.Windows.Forms.Button();
+            this.gbxParametros = new System.Windows.Forms.GroupBox();
+            this.txtBaseDeDatos = new System.Windows.Forms.TextBox();
+            this.txtPuerto = new System.Windows.Forms.TextBox();
+            this.lblBaseDeDatos = new System.Windows.Forms.Label();
+            this.lblPuerto = new System.Windows.Forms.Label();
+            this.txtPwd = new System.Windows.Forms.TextBox();
+            this.lblPwd = new System.Windows.Forms.Label();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.txtHost = new System.Windows.Forms.TextBox();
+            this.lblHost = new System.Windows.Forms.Label();
             this.lblServidor = new System.Windows.Forms.Label();
             this.cbxConexion = new System.Windows.Forms.ComboBox();
             this.listImages = new System.Windows.Forms.ImageList(this.components);
-            this.lblHost = new System.Windows.Forms.Label();
-            this.gbxParametros = new System.Windows.Forms.GroupBox();
-            this.txtHost = new System.Windows.Forms.TextBox();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.lblPwd = new System.Windows.Forms.Label();
-            this.txtPwd = new System.Windows.Forms.TextBox();
-            this.lblPuerto = new System.Windows.Forms.Label();
-            this.lblBaseDeDatos = new System.Windows.Forms.Label();
-            this.txtPuerto = new System.Windows.Forms.TextBox();
-            this.txtBaseDeDatos = new System.Windows.Forms.TextBox();
-            this.btnEntrar = new System.Windows.Forms.Button();
-            this.btnCerrar = new System.Windows.Forms.Button();
-            this.pbxSimbolo = new System.Windows.Forms.PictureBox();
-            this.pbxCerrar = new System.Windows.Forms.PictureBox();
             this.pnlTitulo.SuspendLayout();
-            this.pnlContenido.SuspendLayout();
-            this.gbxParametros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSimbolo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCerrar)).BeginInit();
+            this.pnlContenido.SuspendLayout();
+            this.gbxParametros.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTitulo
@@ -70,12 +70,34 @@
             this.pnlTitulo.Size = new System.Drawing.Size(621, 34);
             this.pnlTitulo.TabIndex = 1;
             // 
+            // pbxSimbolo
+            // 
+            this.pbxSimbolo.BackgroundImage = global::GdiondoSQL.Properties.Resources.depositphotos_44842299_stock_illustration_smelly_toilet;
+            this.pbxSimbolo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxSimbolo.Location = new System.Drawing.Point(-1, 0);
+            this.pbxSimbolo.Name = "pbxSimbolo";
+            this.pbxSimbolo.Size = new System.Drawing.Size(44, 41);
+            this.pbxSimbolo.TabIndex = 2;
+            this.pbxSimbolo.TabStop = false;
+            // 
+            // pbxCerrar
+            // 
+            this.pbxCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbxCerrar.BackgroundImage = global::GdiondoSQL.Properties.Resources.Windows_Close_Program_22531;
+            this.pbxCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxCerrar.Location = new System.Drawing.Point(582, 0);
+            this.pbxCerrar.Name = "pbxCerrar";
+            this.pbxCerrar.Size = new System.Drawing.Size(39, 34);
+            this.pbxCerrar.TabIndex = 1;
+            this.pbxCerrar.TabStop = false;
+            this.pbxCerrar.Click += new System.EventHandler(this.pbxCerrar_Click);
+            // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(266, 9);
+            this.lblTitulo.Location = new System.Drawing.Point(48, 8);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(88, 19);
             this.lblTitulo.TabIndex = 0;
@@ -83,7 +105,7 @@
             // 
             // pnlContenido
             // 
-            this.pnlContenido.BackColor = System.Drawing.SystemColors.Menu;
+            this.pnlContenido.BackColor = System.Drawing.Color.Gray;
             this.pnlContenido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlContenido.Controls.Add(this.btnCerrar);
             this.pnlContenido.Controls.Add(this.btnEntrar);
@@ -96,9 +118,147 @@
             this.pnlContenido.Size = new System.Drawing.Size(621, 309);
             this.pnlContenido.TabIndex = 2;
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.Color.Black;
+            this.btnCerrar.Location = new System.Drawing.Point(455, 263);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(123, 32);
+            this.btnCerrar.TabIndex = 5;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // btnEntrar
+            // 
+            this.btnEntrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnEntrar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnEntrar.FlatAppearance.BorderSize = 0;
+            this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEntrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntrar.ForeColor = System.Drawing.Color.Black;
+            this.btnEntrar.Location = new System.Drawing.Point(41, 263);
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.Size = new System.Drawing.Size(123, 32);
+            this.btnEntrar.TabIndex = 4;
+            this.btnEntrar.Text = "Entrar";
+            this.btnEntrar.UseVisualStyleBackColor = false;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
+            // 
+            // gbxParametros
+            // 
+            this.gbxParametros.Controls.Add(this.txtBaseDeDatos);
+            this.gbxParametros.Controls.Add(this.txtPuerto);
+            this.gbxParametros.Controls.Add(this.lblBaseDeDatos);
+            this.gbxParametros.Controls.Add(this.lblPuerto);
+            this.gbxParametros.Controls.Add(this.txtPwd);
+            this.gbxParametros.Controls.Add(this.lblPwd);
+            this.gbxParametros.Controls.Add(this.txtUsuario);
+            this.gbxParametros.Controls.Add(this.lblUsuario);
+            this.gbxParametros.Controls.Add(this.txtHost);
+            this.gbxParametros.Controls.Add(this.lblHost);
+            this.gbxParametros.Location = new System.Drawing.Point(41, 66);
+            this.gbxParametros.Name = "gbxParametros";
+            this.gbxParametros.Size = new System.Drawing.Size(539, 181);
+            this.gbxParametros.TabIndex = 3;
+            this.gbxParametros.TabStop = false;
+            // 
+            // txtBaseDeDatos
+            // 
+            this.txtBaseDeDatos.Location = new System.Drawing.Point(271, 97);
+            this.txtBaseDeDatos.Multiline = true;
+            this.txtBaseDeDatos.Name = "txtBaseDeDatos";
+            this.txtBaseDeDatos.Size = new System.Drawing.Size(222, 58);
+            this.txtBaseDeDatos.TabIndex = 11;
+            // 
+            // txtPuerto
+            // 
+            this.txtPuerto.Location = new System.Drawing.Point(342, 23);
+            this.txtPuerto.Name = "txtPuerto";
+            this.txtPuerto.Size = new System.Drawing.Size(100, 27);
+            this.txtPuerto.TabIndex = 10;
+            // 
+            // lblBaseDeDatos
+            // 
+            this.lblBaseDeDatos.AutoSize = true;
+            this.lblBaseDeDatos.ForeColor = System.Drawing.Color.White;
+            this.lblBaseDeDatos.Location = new System.Drawing.Point(322, 73);
+            this.lblBaseDeDatos.Name = "lblBaseDeDatos";
+            this.lblBaseDeDatos.Size = new System.Drawing.Size(120, 21);
+            this.lblBaseDeDatos.TabIndex = 9;
+            this.lblBaseDeDatos.Text = "Base de datos";
+            // 
+            // lblPuerto
+            // 
+            this.lblPuerto.AutoSize = true;
+            this.lblPuerto.ForeColor = System.Drawing.Color.White;
+            this.lblPuerto.Location = new System.Drawing.Point(267, 26);
+            this.lblPuerto.Name = "lblPuerto";
+            this.lblPuerto.Size = new System.Drawing.Size(69, 21);
+            this.lblPuerto.TabIndex = 8;
+            this.lblPuerto.Text = "Puerto: ";
+            // 
+            // txtPwd
+            // 
+            this.txtPwd.Location = new System.Drawing.Point(123, 128);
+            this.txtPwd.Name = "txtPwd";
+            this.txtPwd.Size = new System.Drawing.Size(100, 27);
+            this.txtPwd.TabIndex = 7;
+            this.txtPwd.UseSystemPasswordChar = true;
+            // 
+            // lblPwd
+            // 
+            this.lblPwd.AutoSize = true;
+            this.lblPwd.ForeColor = System.Drawing.Color.White;
+            this.lblPwd.Location = new System.Drawing.Point(6, 131);
+            this.lblPwd.Name = "lblPwd";
+            this.lblPwd.Size = new System.Drawing.Size(111, 21);
+            this.lblPwd.TabIndex = 6;
+            this.lblPwd.Text = "Contraseña: ";
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(123, 70);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(100, 27);
+            this.txtUsuario.TabIndex = 5;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblUsuario.Location = new System.Drawing.Point(43, 73);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(74, 21);
+            this.lblUsuario.TabIndex = 4;
+            this.lblUsuario.Text = "Usuario: ";
+            // 
+            // txtHost
+            // 
+            this.txtHost.Location = new System.Drawing.Point(123, 23);
+            this.txtHost.Name = "txtHost";
+            this.txtHost.Size = new System.Drawing.Size(98, 27);
+            this.txtHost.TabIndex = 3;
+            // 
+            // lblHost
+            // 
+            this.lblHost.AutoSize = true;
+            this.lblHost.ForeColor = System.Drawing.Color.White;
+            this.lblHost.Location = new System.Drawing.Point(65, 26);
+            this.lblHost.Name = "lblHost";
+            this.lblHost.Size = new System.Drawing.Size(52, 21);
+            this.lblHost.TabIndex = 2;
+            this.lblHost.Text = "Host: ";
+            // 
             // lblServidor
             // 
             this.lblServidor.AutoSize = true;
+            this.lblServidor.ForeColor = System.Drawing.Color.White;
             this.lblServidor.Location = new System.Drawing.Point(12, 29);
             this.lblServidor.Name = "lblServidor";
             this.lblServidor.Size = new System.Drawing.Size(166, 21);
@@ -128,160 +288,6 @@
             this.listImages.Images.SetKeyName(4, "raven.png");
             this.listImages.Images.SetKeyName(5, "1494258020-leafspringplantecologygreen_84346.png");
             // 
-            // lblHost
-            // 
-            this.lblHost.AutoSize = true;
-            this.lblHost.Location = new System.Drawing.Point(65, 26);
-            this.lblHost.Name = "lblHost";
-            this.lblHost.Size = new System.Drawing.Size(52, 21);
-            this.lblHost.TabIndex = 2;
-            this.lblHost.Text = "Host: ";
-            // 
-            // gbxParametros
-            // 
-            this.gbxParametros.Controls.Add(this.txtBaseDeDatos);
-            this.gbxParametros.Controls.Add(this.txtPuerto);
-            this.gbxParametros.Controls.Add(this.lblBaseDeDatos);
-            this.gbxParametros.Controls.Add(this.lblPuerto);
-            this.gbxParametros.Controls.Add(this.txtPwd);
-            this.gbxParametros.Controls.Add(this.lblPwd);
-            this.gbxParametros.Controls.Add(this.txtUsuario);
-            this.gbxParametros.Controls.Add(this.lblUsuario);
-            this.gbxParametros.Controls.Add(this.txtHost);
-            this.gbxParametros.Controls.Add(this.lblHost);
-            this.gbxParametros.Location = new System.Drawing.Point(41, 66);
-            this.gbxParametros.Name = "gbxParametros";
-            this.gbxParametros.Size = new System.Drawing.Size(539, 181);
-            this.gbxParametros.TabIndex = 3;
-            this.gbxParametros.TabStop = false;
-            // 
-            // txtHost
-            // 
-            this.txtHost.Location = new System.Drawing.Point(123, 23);
-            this.txtHost.Name = "txtHost";
-            this.txtHost.Size = new System.Drawing.Size(98, 27);
-            this.txtHost.TabIndex = 3;
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(43, 73);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(74, 21);
-            this.lblUsuario.TabIndex = 4;
-            this.lblUsuario.Text = "Usuario: ";
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Location = new System.Drawing.Point(123, 70);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(100, 27);
-            this.txtUsuario.TabIndex = 5;
-            // 
-            // lblPwd
-            // 
-            this.lblPwd.AutoSize = true;
-            this.lblPwd.Location = new System.Drawing.Point(6, 131);
-            this.lblPwd.Name = "lblPwd";
-            this.lblPwd.Size = new System.Drawing.Size(111, 21);
-            this.lblPwd.TabIndex = 6;
-            this.lblPwd.Text = "Contraseña: ";
-            // 
-            // txtPwd
-            // 
-            this.txtPwd.Location = new System.Drawing.Point(123, 128);
-            this.txtPwd.Name = "txtPwd";
-            this.txtPwd.Size = new System.Drawing.Size(100, 27);
-            this.txtPwd.TabIndex = 7;
-            this.txtPwd.UseSystemPasswordChar = true;
-            // 
-            // lblPuerto
-            // 
-            this.lblPuerto.AutoSize = true;
-            this.lblPuerto.Location = new System.Drawing.Point(267, 26);
-            this.lblPuerto.Name = "lblPuerto";
-            this.lblPuerto.Size = new System.Drawing.Size(69, 21);
-            this.lblPuerto.TabIndex = 8;
-            this.lblPuerto.Text = "Puerto: ";
-            // 
-            // lblBaseDeDatos
-            // 
-            this.lblBaseDeDatos.AutoSize = true;
-            this.lblBaseDeDatos.Location = new System.Drawing.Point(276, 73);
-            this.lblBaseDeDatos.Name = "lblBaseDeDatos";
-            this.lblBaseDeDatos.Size = new System.Drawing.Size(128, 21);
-            this.lblBaseDeDatos.TabIndex = 9;
-            this.lblBaseDeDatos.Text = "Base de datos: ";
-            // 
-            // txtPuerto
-            // 
-            this.txtPuerto.Location = new System.Drawing.Point(342, 23);
-            this.txtPuerto.Name = "txtPuerto";
-            this.txtPuerto.Size = new System.Drawing.Size(100, 27);
-            this.txtPuerto.TabIndex = 10;
-            // 
-            // txtBaseDeDatos
-            // 
-            this.txtBaseDeDatos.Location = new System.Drawing.Point(271, 97);
-            this.txtBaseDeDatos.Multiline = true;
-            this.txtBaseDeDatos.Name = "txtBaseDeDatos";
-            this.txtBaseDeDatos.Size = new System.Drawing.Size(222, 58);
-            this.txtBaseDeDatos.TabIndex = 11;
-            // 
-            // btnEntrar
-            // 
-            this.btnEntrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEntrar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEntrar.FlatAppearance.BorderSize = 0;
-            this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEntrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrar.ForeColor = System.Drawing.Color.Blue;
-            this.btnEntrar.Location = new System.Drawing.Point(41, 263);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(123, 32);
-            this.btnEntrar.TabIndex = 4;
-            this.btnEntrar.Text = "Entrar";
-            this.btnEntrar.UseVisualStyleBackColor = false;
-            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.ForeColor = System.Drawing.Color.Blue;
-            this.btnCerrar.Location = new System.Drawing.Point(455, 263);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(123, 32);
-            this.btnCerrar.TabIndex = 5;
-            this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // pbxSimbolo
-            // 
-            this.pbxSimbolo.BackgroundImage = global::GdiondoSQL.Properties.Resources.depositphotos_44842299_stock_illustration_smelly_toilet;
-            this.pbxSimbolo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbxSimbolo.Location = new System.Drawing.Point(-1, 0);
-            this.pbxSimbolo.Name = "pbxSimbolo";
-            this.pbxSimbolo.Size = new System.Drawing.Size(44, 41);
-            this.pbxSimbolo.TabIndex = 2;
-            this.pbxSimbolo.TabStop = false;
-            // 
-            // pbxCerrar
-            // 
-            this.pbxCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbxCerrar.BackgroundImage = global::GdiondoSQL.Properties.Resources.Windows_Close_Program_22531;
-            this.pbxCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbxCerrar.Location = new System.Drawing.Point(582, 0);
-            this.pbxCerrar.Name = "pbxCerrar";
-            this.pbxCerrar.Size = new System.Drawing.Size(39, 34);
-            this.pbxCerrar.TabIndex = 1;
-            this.pbxCerrar.TabStop = false;
-            this.pbxCerrar.Click += new System.EventHandler(this.pbxCerrar_Click);
-            // 
             // frmConexion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -298,12 +304,12 @@
             this.Load += new System.EventHandler(this.frmConexion_Load);
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxSimbolo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCerrar)).EndInit();
             this.pnlContenido.ResumeLayout(false);
             this.pnlContenido.PerformLayout();
             this.gbxParametros.ResumeLayout(false);
             this.gbxParametros.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxSimbolo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxCerrar)).EndInit();
             this.ResumeLayout(false);
 
         }

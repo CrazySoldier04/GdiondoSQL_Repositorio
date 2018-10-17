@@ -31,12 +31,15 @@ namespace GdiondoSQL
             foreach (String item in MySql.lista)
             {
                 TreeNode nodo = new TreeNode(item);
+                nodo.ImageIndex = 0;
                 tablas.Tables(item);
                 foreach (String tablas in MySql.listaTablas)
                 {
                     nodo.Nodes.Add(tablas);
+                    nodo.ImageIndex = 1;
                 }
                 treeView1.Nodes.Add(nodo);
+                nodo.ImageIndex = 1;
             }
         }
 
@@ -47,7 +50,7 @@ namespace GdiondoSQL
 
         private void treeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            //CargarDatos();
+            //treeView1.SelectedNode.ImageIndex = 1;
         }
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)

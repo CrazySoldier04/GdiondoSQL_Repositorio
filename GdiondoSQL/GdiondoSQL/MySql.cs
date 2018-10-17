@@ -170,5 +170,35 @@ namespace GdiondoSQL
             }
             return dt;
         }
+
+        public string ShowCreateTable(String tabla)
+        {
+            try
+            {
+                if(AbrirConexion())
+                {
+                    cmd = new MySqlCommand("SHOW CREATE TABLE " + tabla + ";", cn);
+                    dr = cmd.ExecuteReader();
+                    if(dr.Read())
+                    {
+                        dr.GetString(1);
+                    }
+                }
+
+            }
+            catch (MySqlException mysqlex)
+            {
+                errorMsge = "Error de MySql al mostrar la estructura de la tabla: " + mysqlex.ToString();
+            }
+            catch (Exception ex)
+            {
+                errorMsge = "Error general al mostrar la estructura de la tabla: " + ex.ToString();
+            }
+            finally
+            {
+                CerrarConexion();
+            }
+            return "";
+        }
     }
 }

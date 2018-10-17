@@ -19,7 +19,6 @@ namespace GdiondoSQL
             InitializeComponent();
         }
 
-
         private void ShowNewForm(object sender, EventArgs e)
         {
             Form childForm = new Form();
