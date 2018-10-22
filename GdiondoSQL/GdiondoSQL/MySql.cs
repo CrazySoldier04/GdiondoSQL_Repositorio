@@ -19,7 +19,6 @@ namespace GdiondoSQL
         private bool res = false;
         DataTable dt;
         MySqlDataAdapter da;
-        //DataSet dt
 
         public MySql(string host, string puerto, string usuario, string pwd, string database)
         {
@@ -28,7 +27,7 @@ namespace GdiondoSQL
 
         public MySql()
         {
-
+            cn = new MySqlConnection("host=127.0.0.1;uid=root;pwd=salazar;");
         }
 
         public bool AbrirConexion()

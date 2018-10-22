@@ -20,11 +20,13 @@ namespace GdiondoSQL
         }
 
         public static String user, pwd, database, puerto, server, host;
+        private int index = 0;
 
         private int _imageIndex;
         private String _etiqueta;
 
-        MySql lib;
+        MySql libm;
+        PostgresSql libp;
 
         public int ImageIndex
         {
@@ -166,25 +168,31 @@ namespace GdiondoSQL
             database = txtBaseDeDatos.Text;
             if (cbxConexion.SelectedIndex == 0)
             {
-                lib = new MySql(txtHost.Text, txtPuerto.Text, txtUsuario.Text, txtPwd.Text, txtBaseDeDatos.Text);
-                if (lib.AbrirConexion())
+                libm = new MySql(txtHost.Text, txtPuerto.Text, txtUsuario.Text, txtPwd.Text, txtBaseDeDatos.Text);
+                if (libm.AbrirConexion())
                 {
-                    frmDataBases ventana = new frmDataBases();
+                    index = cbxConexion.SelectedIndex;
+                    frmDataBases ventana = new frmDataBases(index);
                     this.Hide();
                     ventana.ShowDialog();
                 }
                 else
                 {
-                    MessageBox.Show("Error: " + lib.errorMsge, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                    MessageBox.Show("Error: " + libm.errorMsge, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
                 }
-                lib.CerrarConexion();
+                libm.CerrarConexion();
             }
             else if (cbxConexion.SelectedIndex == 3)
             {
-                PostgresSql libp = new PostgresSql();
+                PostgresSql libp = new PostgresSql(txtHost.Text, txtUsuario.Text, txtPwd.Text, txtBaseDeDatos.Text);
                 if(libp.OpenConnection())
                 {
-                    MessageBox.Show("Mierda");
+                    index = cbxConexion.SelectedIndex;
+                    //MessageBox.Show("Mierda");
+                    frmDataBases ventana = new frmDataBases(index);
+                    Hide();
+                    ventana.ShowDialog();
+                    Show();
                 }
                 else
                 {
