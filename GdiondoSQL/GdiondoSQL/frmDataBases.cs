@@ -55,7 +55,7 @@ namespace GdiondoSQL
                     {
                         TreeNode nodo = new TreeNode(item);
                         nodo.ImageIndex = 0;
-                        tablas.Tables(item);
+                        libp.Tables();
                         foreach (String tablas in libp.tables)
                         {
                             nodo.Nodes.Add(tablas);

@@ -82,7 +82,7 @@ namespace GdiondoSQL
             {
                 if(OpenConnection())
                 {
-                    cmd = new NpgsqlCommand("SHOW DATABASES;", cn);
+                    cmd = new NpgsqlCommand("SELECT datname FROM pg_database;", cn);
                     dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {

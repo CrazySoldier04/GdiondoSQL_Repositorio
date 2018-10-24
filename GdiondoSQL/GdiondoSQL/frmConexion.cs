@@ -188,11 +188,10 @@ namespace GdiondoSQL
                 if(libp.OpenConnection())
                 {
                     index = cbxConexion.SelectedIndex;
-                    //MessageBox.Show("Mierda");
                     frmDataBases ventana = new frmDataBases(index);
                     Hide();
                     ventana.ShowDialog();
-                    Show();
+                    //Show();
                 }
                 else
                 {
